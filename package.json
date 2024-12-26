@@ -1,0 +1,29 @@
+{
+  "name": "mission-board-api",
+  "version": "1.96.0",
+  "engines": {
+    "node": "22.12.0",
+    "yarn": "1.22.19"
+  },
+  "license": "MIT",
+  "scripts": {
+    "prisma:migrate:save": "npx prisma migrate dev --skip-seed --create-only",
+    "prisma:migrate:update": "npx prisma migrate dev --skip-seed",
+    "prisma:migrate:run": "npx prisma migrate deploy",
+    "start": "ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migrate:run":"typeorm migration:run -d src/datasource.ts"
+  },
+  "dependencies": {
+    "pg": "^8.13.1",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "dot-env": "^0.0.1",
+    "dotenv": "^16.4.7",
+    "typescript": "^5.7.2"
+  }
+}

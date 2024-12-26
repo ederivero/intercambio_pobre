@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "CommonJS",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "strictPropertyInitialization": false,
+      "strict": true,
+      "outDir": "./dist",
+      "rootDir": "./src"
+    },
+    "include": ["src"]
+  }
+  
