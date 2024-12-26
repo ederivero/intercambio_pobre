@@ -5,7 +5,6 @@ import { config } from 'dotenv'
 config()
 
 function sorteo(usuarios: Array<{ slackId: string }>) {
-  console.log('entro')
   const usuariosEscogidos = [0]
   const resultadoSorteo = []
   let usuario = 0
@@ -96,8 +95,6 @@ async function main() {
     const angel = usuarios.find((usuario) => usuario.slackId === usuarios[resultadoSorteo[index][0]].slackId)
 
     const ahijado = usuarios.find((usuario) => usuario.slackId === usuarios[resultadoSorteo[index][1]].slackId)
-
-    console.log({ angel, ahijado })
 
     if (ahijado && angel) {
       const nuevoIntercambio = new Intercambio()
